@@ -1,101 +1,184 @@
-import Image from "next/image";
+import Navbar from './components/Navbar/Navbar';
+import ProjectCard from './components/Card/Card';
+import './globals.css';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const projects = [
+    {
+      title: "Portfolio Website",
+      description: "A sleek and responsive developer portfolio built with Next.js and Tailwind CSS.",
+      link: "https://yourportfolio.com",
+      tags: ["nextjs", "tailwind", "design"],
+      emoji: "💻",
+    },
+    {
+      title: "Calypso",
+      description: "A real-time weather dashboard using OpenWeatherMap API.",
+      link: "https://yourweatherapp.com",
+      tags: ["react", "api", "typescript"],
+      emoji: "⛅",
+    },
+    {
+      title: "FEIN",
+      description: "A real-time functional stock paper trading application with an appealing user interface.",
+      link: "https://yourweatherapp.com",
+      tags: ["react", "api", "typescript"],
+      emoji: "📈",
+    },
+    {
+      title: "sample_project",
+      description: "A real-time weather dashboard using OpenWeatherMap API.",
+      link: "https://yourweatherapp.com",
+      tags: ["react", "api", "typescript"],
+      emoji: "🚀",
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="bg-midnight text-sand scroll-smooth">
+      <Navbar />
+
+      {/* Hero Section */}
+      <section
+        id="home"
+        className="h-screen flex items-center justify-center px-8 md:px-20 relative"
+      >
+        {/* >>>> HUGE > SYMBOL ADDED HERE <<<< */}
+        <div className="absolute left-0 md:left-12 top-1/2 transform -translate-y-80 text-cyan-500 text-[400px] font-bold select-none opacity-10 pointer-events-none z-0">
+          &gt;
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-7xl z-10 ml-36 mt-10">
+          {/* Left Text Section */}
+          <div className="flex-1 md:pr-12 text-center md:text-left">
+            <h1 className="text-5xl md:text-6xl font-extrabold tracking-widest text-neutral-100 drop-shadow-lg">
+              Austin Bartolome
+            </h1>
+            <p className="mt-4 text-md md:text-lg text-gray-400 font-mono uppercase tracking-wide">
+              Software Engineer, Front End & App Developer.
+            </p>
+            <p className="mt-6 text-sm md:text-base text-gray-400 leading-relaxed max-w-lg mx-auto md:mx-0">
+              I'm a Software Engineering graduate from the University of Toronto with hands-on experience in full-stack development, React, and backend tools like Express. I’ve built real-time apps, smart UI features, and internal tools through co-ops and academic projects. Passionate about clean design, strong code, and always learning something new.
+            </p>
+
+            {/* Download CV Button */}
+            <div className="mt-8">
+              <a
+                href="/Austin_Bartolome_CV.pdf"
+                download
+                className="inline-flex items-center gap-2 text-cyan-400 border border-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold px-6 py-3 rounded-xl transition-all shadow-lg"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+                  />
+                </svg>
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          {/* Right Image Section */}
+          <div className="relative w-[32rem] h-[36rem] flex items-center justify-center">
+            {/* Top-left blue corner */}
+            <div className="absolute top-[-14px] left-[-14px] w-14 h-14 border-t-4 border-l-4 border-cyan-400 rounded-tl-[1.5rem] z-0" />
+
+            {/* Bottom-right blue corner */}
+            <div className="absolute bottom-[-14px] right-[-14px] w-14 h-14 border-b-4 border-r-4 border-cyan-400 rounded-br-[1.5rem] z-0" />
+
+            {/* Rounded image */}
+            <div className="relative w-[27rem] h-[31rem] border-4 border-gray-400 shadow-lg z-10 rounded-2xl overflow-hidden">
+              <img
+                src="/profile-pic.jpg"
+                alt="Profile"
+                className="w-full h-full object-cover object-[center_80%]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section
+        id="projects"
+        className="h-screen flex flex-col justify-center items-center px-4 max-w-5xl mx-auto"
+      >
+        <h2 className="text-5xl font-bold mb-10 text-center">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-8 w-full">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section
+        id="skills"
+        className="h-screen flex flex-col justify-center items-center px-4 max-w-4xl mx-auto text-center"
+      >
+        <h2 className="text-5xl font-bold mb-10">Skills</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 w-full">
+          {[
+            { icon: "🐍", name: "Python" },
+            { icon: "☕", name: "Java" },
+            { icon: "💾", name: "C" },
+            { icon: "📈", name: "SDLC" },
+          ].map((skill, i) => (
+            <div
+              key={i}
+              className="bg-espresso rounded-xl p-6 border border-bronze shadow hover:shadow-lg transition"
+            >
+              <span className="text-3xl">{skill.icon}</span>
+              <h3 className="mt-2 text-lg font-semibold text-amber">
+                {skill.name}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section
+        id="contact"
+        className="h-screen flex flex-col justify-center items-center text-center px-4 max-w-2xl mx-auto"
+      >
+        <h2 className="text-5xl font-bold mb-10 text-center">Contact</h2>
+        <div className="space-y-6 text-lg">
+          <p>
+            📧 Email:{" "}
+            <a
+              href="mailto:austinkbartolome@gmail.com"
+              className="text-amber hover:underline"
+            >
+              austinkbartolome@gmail.com
+            </a>
+          </p>
+          <p>
+            📱 Phone:{" "}
+            <a href="tel:+1234567890" className="text-amber hover:underline">
+              (123) 456-7890
+            </a>
+          </p>
+          <p>
+            <a
+              href="https://www.linkedin.com/in/austin-bartolome-a406061ba/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-amber hover:underline"
+            >
+              💼 LinkedIn
+            </a>
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
