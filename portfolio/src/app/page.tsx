@@ -64,7 +64,7 @@ export default function Home() {
             {/* Download CV Button */}
             <div className="mt-8">
               <a
-                href="/Austin_Bartolome_CV.pdf"
+                href="/Austin Bartolome Resume.pdf"
                 download
                 className="inline-flex items-center gap-2 text-cyan-400 border border-cyan-400 hover:bg-cyan-500 hover:text-black font-semibold px-6 py-3 rounded-xl transition-all shadow-lg"
               >
@@ -130,7 +130,12 @@ export default function Home() {
             { icon: "🐍", name: "Python" },
             { icon: "☕", name: "Java" },
             { icon: "💾", name: "C" },
-            { icon: "📈", name: "SDLC" },
+            { icon: "⚛️", name: "React" },
+            { icon: "🌐", name: "HTML" },
+            { icon: "🎨", name: "CSS" },
+            { icon: "🧠", name: "SDLC" },
+            { icon: "🧪", name: "Testing" },
+            { icon: "🤖", name: "Automation" },
           ].map((skill, i) => (
             <div
               key={i}

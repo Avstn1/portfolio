@@ -35,4 +35,9 @@ body {
   animation: ping-slow 4s infinite;
 }
 
+.devicon-react-original {
+  font-size: 24px;
+  color: rgb(111, 111, 253)
+}
+
 
