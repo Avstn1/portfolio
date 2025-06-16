@@ -26,7 +26,7 @@ const Navbar = () => {
               onClick={(e) => handleClick(e, link)}
               className="relative inline-block hover:text-white transition-colors duration-300"
             >
-              <span className="text-secondary">0{index + 1}</span> // {link}
+              <span className="text-secondary">0{index + 1}</span> / {link}
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
