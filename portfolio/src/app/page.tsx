@@ -97,7 +97,7 @@ export default function Home() {
             {/* Rounded image */}
             <div className="relative w-[27rem] h-[31rem] border-4 border-gray-400 shadow-lg z-10 rounded-2xl overflow-hidden">
               <img
-                src="/profile-pic.JPG"
+                src="/profile.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover object-[center_80%]"
               />
