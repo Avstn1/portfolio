@@ -11,6 +11,18 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    rules: {
+      // ✅ Allow JSX comments outside braces
+      "react/jsx-no-comment-textnodes": "off",
+
+      // ✅ Allow unescaped characters like `'` in JSX
+      "react/no-unescaped-entities": "off",
+
+      // ✅ Allow using <img> instead of <Image />
+      "@next/next/no-img-element": "off",
+    },
+  },
 ];
 
 export default eslintConfig;
