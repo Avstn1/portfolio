@@ -7,7 +7,7 @@ export default function Home() {
     {
       title: "Portfolio Website",
       description: "A sleek and responsive developer portfolio built with Next.js and Tailwind CSS.",
-      link: "https://yourportfolio.com",
+      link: "https://portfolio-w1tl.onrender.com/",
       tags: ["nextjs", "tailwind", "design"],
       emoji: "💻",
     },
