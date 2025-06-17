@@ -10,10 +10,17 @@ const Navbar = () => {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (id === 'skills') {
+        // Scroll so Skills section aligns at top of viewport
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        // Scroll normally, e.g., center or default
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     }
     setIsOpen(false); // Close menu after click
   };
+
 
   return (
     <nav className="fixed top-0 left-0 w-full px-6 py-4 md:px-12 md:py-6 flex items-center justify-between z-50 bg-charcoal bg-opacity-90 backdrop-blur-md">

@@ -108,7 +108,7 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-24 px-4 max-w-4xl mx-auto text-center">
+      <section id="skills" className="py-24 px-4 max-w-4xl mx-auto text-center scroll-mt-24">
         <h2 className="text-4xl md:text-5xl font-bold mb-12">Skills</h2>
 
         {/* LANGUAGES */}
