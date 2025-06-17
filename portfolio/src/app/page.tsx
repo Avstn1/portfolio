@@ -19,18 +19,18 @@ export default function Home() {
       emoji: "⛅",
     },
     {
+      title: "Personal Resume Tailor Automation",
+      description: "A Python tool that uses OpenAI’s GPT-3.5 Turbo API to intelligently customize your resume based on any job description, with a simple tkinter GUI and Word/PDF export.",
+      link: "https://github.com/Avstn1/sp1py",
+      tags: ["python", "openai", "tkinter", "resume", "automation", "docx"],
+      emoji: "📄",
+    },
+    {
       title: "FEIN",
       description: "A real-time functional stock paper trading application with an appealing user interface.",
       link: "https://yourweatherapp.com",
       tags: ["react", "api", "typescript"],
       emoji: "📈",
-    },
-    {
-      title: "sample_project",
-      description: "A real-time weather dashboard using OpenWeatherMap API.",
-      link: "https://yourweatherapp.com",
-      tags: ["react", "api", "typescript"],
-      emoji: "🚀",
     },
   ];
 
