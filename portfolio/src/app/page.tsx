@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar/Navbar';
 import ProjectCard from './components/Card/Card';
 import './globals.css';
+import Head from 'next/head';
 
 export default function Home() {
   const projects = [
@@ -36,6 +37,9 @@ export default function Home() {
 
   return (
     <div className="bg-midnight text-sand scroll-smooth">
+      <Head>
+        <title>Austin Bartolome</title>
+      </Head>
       <Navbar />
 
       {/* Hero Section */}
