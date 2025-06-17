@@ -13,8 +13,8 @@ export default function Home() {
     },
     {
       title: "Calypso",
-      description: "A real-time weather dashboard using OpenWeatherMap API.",
-      link: "https://yourweatherapp.com",
+      description: "Calypso is a platform connecting artists and enthusiasts with diverse art, commissions, and analytics to grow creative communities.",
+      link: "https://github.com/CSCC012023/final-project-s23-calypso",
       tags: ["react", "api", "typescript"],
       emoji: "⛅",
     },
@@ -28,7 +28,7 @@ export default function Home() {
     {
       title: "FEIN",
       description: "A real-time functional stock paper trading application with an appealing user interface.",
-      link: "https://yourweatherapp.com",
+      link: "https://github.com/UTSCC09/project-fein",
       tags: ["react", "api", "typescript"],
       emoji: "📈",
     },
