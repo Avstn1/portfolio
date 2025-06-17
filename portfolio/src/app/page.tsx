@@ -109,29 +109,82 @@ export default function Home() {
 
       {/* Skills Section */}
       <section id="skills" className="py-24 px-4 max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-10">Skills</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 w-full">
-          {[
-            { icon: "🐍", name: "Python" },
-            { icon: "☕", name: "Java" },
-            { icon: "💾", name: "C" },
-            { icon: "⚛️", name: "React" },
-            { icon: "🌐", name: "HTML" },
-            { icon: "🎨", name: "CSS" },
-            { icon: "🧠", name: "SDLC" },
-            { icon: "🧪", name: "Testing" },
-            { icon: "🤖", name: "Automation" },
-          ].map((skill, i) => (
-            <div
-              key={i}
-              className="bg-espresso rounded-xl p-6 border border-bronze shadow hover:shadow-lg transition"
-            >
-              <span className="text-3xl">{skill.icon}</span>
-              <h3 className="mt-2 text-lg font-semibold text-amber">{skill.name}</h3>
-            </div>
-          ))}
+        <h2 className="text-4xl md:text-5xl font-bold mb-12">Skills</h2>
+
+        {/* LANGUAGES */}
+        <div className="mb-12">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-amber">Languages</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {[
+              { icon: "devicon-python-plain colored", name: "Python" },
+              { icon: "devicon-java-plain colored", name: "Java" },
+              { icon: "devicon-c-plain colored", name: "C" },
+              { icon: "devicon-csharp-plain colored", name: "C#" },
+              { icon: "devicon-javascript-plain colored", name: "JavaScript" },
+              { icon: "devicon-typescript-plain colored", name: "TypeScript" },
+              { icon: "devicon-html5-plain colored", name: "HTML5" },
+              { icon: "devicon-css3-plain colored", name: "CSS" },
+              { icon: "devicon-tailwindcss-original colored", name: "Tailwind CSS" },
+            ].map((skill, i) => (
+              <div
+                key={i}
+                className="bg-espresso rounded-xl p-6 border border-bronze shadow hover:shadow-lg transition"
+              >
+                <i className={`${skill.icon} !text-5xl`}></i>
+                <h4 className="mt-2 text-lg font-semibold text-amber">{skill.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* FRAMEWORKS & TOOLS */}
+        <div className="mb-12">
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-amber">Frameworks & Tools</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
+            {[
+              { icon: "devicon-react-original colored", name: "React" },
+              { icon: "devicon-nextjs-original-wordmark", name: "Next.js" },
+              { icon: "devicon-postgresql-plain colored", name: "PostgreSQL" },
+              { icon: "devicon-unity-plain colored", name: "Unity" },
+              { icon: "devicon-mongodb-plain colored", name: "MongoDB" },            // best alternative
+              { icon: "devicon-vscode-plain colored", name: "VS Code" },
+            ].map((skill, i) => (
+              <div
+                key={i}
+                className="bg-espresso rounded-xl p-6 border border-bronze shadow hover:shadow-lg transition"
+              >
+
+
+                <i className={`${skill.icon} !text-5xl`}></i>
+
+
+                <h4 className="mt-2 text-lg font-semibold text-amber">{skill.name}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CONCEPTS */}
+        <div>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-amber">Concepts</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-center">
+            {[
+              { icon: "🧠", name: "SDLC" },
+              { icon: "🔬", name: "Research" },
+              { icon: "🧩", name: "SOLID Principles" },
+            ].map((skill, i) => (
+              <div
+                key={i}
+                className="bg-espresso rounded-xl p-6 border border-bronze shadow hover:shadow-lg transition"
+              >
+                <span className="text-3xl">{skill.icon}</span>
+                <h4 className="mt-2 text-lg font-semibold text-amber">{skill.name}</h4>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-24 px-4 max-w-2xl mx-auto text-center">
